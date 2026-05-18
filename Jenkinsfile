@@ -6,7 +6,13 @@ pipeline {
 
         stage('Clean Workspace') {
             steps {
+
                 cleanWs()
+
+                bat 'if exist allure-results rmdir /s /q allure-results'
+                bat 'if exist allure-report rmdir /s /q allure-report'
+                bat 'if exist test-results rmdir /s /q test-results'
+                bat 'if exist playwright-report rmdir /s /q playwright-report'
             }
         }
 
