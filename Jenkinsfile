@@ -1,7 +1,14 @@
 pipeline {
+
     agent any
 
     stages {
+
+        stage('Clean Workspace') {
+            steps {
+                cleanWs()
+            }
+        }
 
         stage('Checkout Code') {
             steps {
@@ -26,15 +33,14 @@ pipeline {
                 bat 'npx playwright test'
             }
         }
-
     }
 
     post {
 
         always {
+
             echo 'Pipeline completed'
 
-            // If you are using Allure
             allure([
                 includeProperties: false,
                 results: [[path: 'allure-results']]
