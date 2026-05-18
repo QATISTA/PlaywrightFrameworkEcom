@@ -3,12 +3,6 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-            steps {
-                git 'https://github.com/QATISTA/PlaywrightFrameworkEcom.git'
-            }
-        }
-
         stage('Install Dependencies') {
             steps {
                 bat 'npm install'
