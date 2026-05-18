@@ -3,6 +3,12 @@ pipeline {
 
     stages {
 
+        stage('Checkout Code') {
+            steps {
+                checkout scm
+            }
+        }
+
         stage('Install Dependencies') {
             steps {
                 bat 'npm install'
@@ -11,7 +17,7 @@ pipeline {
 
         stage('Install Playwright Browsers') {
             steps {
-                bat 'npx playwright install'
+                bat 'npx playwright install --with-deps'
             }
         }
 
@@ -19,6 +25,20 @@ pipeline {
             steps {
                 bat 'npx playwright test'
             }
+        }
+
+    }
+
+    post {
+
+        always {
+            echo 'Pipeline completed'
+
+            // If you are using Allure
+            allure([
+                includeProperties: false,
+                results: [[path: 'allure-results']]
+            ])
         }
     }
 }
