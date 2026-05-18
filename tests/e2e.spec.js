@@ -1,7 +1,7 @@
 import { test, expect } from '../fixtures/baseFixture';
 import loginData from '../test-data/LoginData.json';
 
-test('Complete Ecommerce Flow', async ({ loginPage,productPage }) => {
+test('Complete Ecommerce Flow', async ({ loginPage,productPage,cartPage,checkoutInfoPage,checkoutOverviewPage }) => {
 
     const newLogin = loginData.login;
 
@@ -13,4 +13,9 @@ test('Complete Ecommerce Flow', async ({ loginPage,productPage }) => {
     );
     await productPage.selectProduct();
    
+    await cartPage.clickCheckout();
+
+    await checkoutInfoPage.CheckoutInfoProceed();
+
+    await checkoutOverviewPage.Finish()
 });

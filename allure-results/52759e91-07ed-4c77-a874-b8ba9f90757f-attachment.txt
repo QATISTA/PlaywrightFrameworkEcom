@@ -1,0 +1,4 @@
+fixture running
+hi
+https://practice.qabrains.com/ecommerce/cart
+https://practice.qabrains.com/ecommerce/checkout-info

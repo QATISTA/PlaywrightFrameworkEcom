@@ -1,0 +1,245 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: e2e.spec.js >> Complete Ecommerce Flow
+- Location: tests\e2e.spec.js:4:5
+
+# Error details
+
+```
+Test timeout of 30000ms exceeded.
+```
+
+```
+Error: locator.click: Test timeout of 30000ms exceeded.
+Call log:
+  - waiting for locator('button[class=\'flex items-center gap-2 bg-qa-clr hover:bg-blue-600 transition duration-300 ease-in-out text-white px-6 py-2 rounded-3xl cursor-pointer\'] span')
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e5]:
+        - link "logo (Practice Site)" [ref=e6] [cursor=pointer]:
+          - /url: /ecommerce
+          - img "logo" [ref=e7]
+          - generic [ref=e8]: (Practice Site)
+        - generic [ref=e9]:
+          - button "1" [ref=e10] [cursor=pointer]:
+            - img [ref=e11]
+            - generic [ref=e13]: "1"
+          - button "practice@qabrains.com" [ref=e14] [cursor=pointer]:
+            - img [ref=e15]
+            - generic [ref=e17]: practice@qabrains.com
+            - img [ref=e19]
+    - generic [ref=e21]:
+      - generic [ref=e22]:
+        - heading "Products" [level=3] [ref=e23]
+        - generic [ref=e24]:
+          - paragraph [ref=e25]: Order by
+          - combobox [ref=e26] [cursor=pointer]:
+            - text: Select...
+            - img
+      - generic [ref=e27]:
+        - generic [ref=e28]:
+          - button [ref=e29] [cursor=pointer]:
+            - button [ref=e30]:
+              - img [ref=e31]
+          - link "Sample Shirt Name" [ref=e33] [cursor=pointer]:
+            - /url: /ecommerce/product-details?id=1
+            - img "Sample Shirt Name" [ref=e34]
+          - link "Sample Shirt Name" [ref=e35] [cursor=pointer]:
+            - /url: /ecommerce/product-details?id=1
+          - link "A sample description for the product." [ref=e36] [cursor=pointer]:
+            - /url: /ecommerce/product-details?id=1
+          - generic [ref=e37]:
+            - generic [ref=e38]: $49.99
+            - button "Remove from cart" [ref=e39] [cursor=pointer]
+        - generic [ref=e40]:
+          - button [ref=e41] [cursor=pointer]:
+            - button [ref=e42]:
+              - img [ref=e43]
+          - link "Sample Shoe Name" [ref=e45] [cursor=pointer]:
+            - /url: /ecommerce/product-details?id=2
+            - img "Sample Shoe Name" [ref=e46]
+          - link "Sample Shoe Name" [ref=e47] [cursor=pointer]:
+            - /url: /ecommerce/product-details?id=2
+          - link "A sample description for the product." [ref=e48] [cursor=pointer]:
+            - /url: /ecommerce/product-details?id=2
+          - generic [ref=e49]:
+            - generic [ref=e50]: $89.00
+            - button "Add to cart" [ref=e51] [cursor=pointer]
+        - generic [ref=e52]:
+          - button [ref=e53] [cursor=pointer]:
+            - button [ref=e54]:
+              - img [ref=e55]
+          - link "Sample Jacket Name" [ref=e57] [cursor=pointer]:
+            - /url: /ecommerce/product-details?id=3
+            - img "Sample Jacket Name" [ref=e58]
+          - link "Sample Jacket Name" [ref=e59] [cursor=pointer]:
+            - /url: /ecommerce/product-details?id=3
+          - link "A sample description for the product." [ref=e60] [cursor=pointer]:
+            - /url: /ecommerce/product-details?id=3
+          - generic [ref=e61]:
+            - generic [ref=e62]: $129.50
+            - button "Add to cart" [ref=e63] [cursor=pointer]
+        - generic [ref=e64]:
+          - button [ref=e65] [cursor=pointer]:
+            - button [ref=e66]:
+              - img [ref=e67]
+          - link "Sample Trouser Name" [ref=e69] [cursor=pointer]:
+            - /url: /ecommerce/product-details?id=4
+            - img "Sample Trouser Name" [ref=e70]
+          - link "Sample Trouser Name" [ref=e71] [cursor=pointer]:
+            - /url: /ecommerce/product-details?id=4
+          - link "A sample description for the product." [ref=e72] [cursor=pointer]:
+            - /url: /ecommerce/product-details?id=4
+          - generic [ref=e73]:
+            - generic [ref=e74]: $72.00
+            - button "Add to cart" [ref=e75] [cursor=pointer]
+        - generic [ref=e76]:
+          - button [ref=e77] [cursor=pointer]:
+            - button [ref=e78]:
+              - img [ref=e79]
+          - link "Sample T-Shirt Name" [ref=e81] [cursor=pointer]:
+            - /url: /ecommerce/product-details?id=5
+            - img "Sample T-Shirt Name" [ref=e82]
+          - link "Sample T-Shirt Name" [ref=e83] [cursor=pointer]:
+            - /url: /ecommerce/product-details?id=5
+          - link "A sample description for the product." [ref=e84] [cursor=pointer]:
+            - /url: /ecommerce/product-details?id=5
+          - generic [ref=e85]:
+            - generic [ref=e86]: $45.00
+            - button "Add to cart" [ref=e87] [cursor=pointer]
+        - generic [ref=e88]:
+          - button [ref=e89] [cursor=pointer]:
+            - button [ref=e90]:
+              - img [ref=e91]
+          - link "Sample Sunglass Name" [ref=e93] [cursor=pointer]:
+            - /url: /ecommerce/product-details?id=6
+            - img "Sample Sunglass Name"
+          - link "Sample Sunglass Name" [ref=e94] [cursor=pointer]:
+            - /url: /ecommerce/product-details?id=6
+          - link "A sample description for the product." [ref=e95] [cursor=pointer]:
+            - /url: /ecommerce/product-details?id=6
+          - generic [ref=e96]:
+            - generic [ref=e97]: $256.45
+            - button "Add to cart" [ref=e98] [cursor=pointer]
+        - generic [ref=e99]:
+          - button [ref=e100] [cursor=pointer]:
+            - button [ref=e101]:
+              - img [ref=e102]
+          - link "Sample Jacket Name" [ref=e104] [cursor=pointer]:
+            - /url: /ecommerce/product-details?id=7
+            - img "Sample Jacket Name"
+          - link "Sample Jacket Name" [ref=e105] [cursor=pointer]:
+            - /url: /ecommerce/product-details?id=7
+          - link "A sample description for the product." [ref=e106] [cursor=pointer]:
+            - /url: /ecommerce/product-details?id=7
+          - generic [ref=e107]:
+            - generic [ref=e108]: $111.00
+            - button "Add to cart" [ref=e109] [cursor=pointer]
+        - generic [ref=e110]:
+          - button [ref=e111] [cursor=pointer]:
+            - button [ref=e112]:
+              - img [ref=e113]
+          - link "Sample Sunglass Name" [ref=e115] [cursor=pointer]:
+            - /url: /ecommerce/product-details?id=8
+            - img "Sample Sunglass Name"
+          - link "Sample Sunglass Name" [ref=e116] [cursor=pointer]:
+            - /url: /ecommerce/product-details?id=8
+          - link "A sample description for the product." [ref=e117] [cursor=pointer]:
+            - /url: /ecommerce/product-details?id=8
+          - generic [ref=e118]:
+            - generic [ref=e119]: $256.45
+            - button "Add to cart" [ref=e120] [cursor=pointer]
+        - generic [ref=e121]:
+          - button [ref=e122] [cursor=pointer]:
+            - button [ref=e123]:
+              - img [ref=e124]
+          - link "Sample T-Shirt Name" [ref=e126] [cursor=pointer]:
+            - /url: /ecommerce/product-details?id=9
+            - img "Sample T-Shirt Name"
+          - link "Sample T-Shirt Name" [ref=e127] [cursor=pointer]:
+            - /url: /ecommerce/product-details?id=9
+          - link "A sample description for the product." [ref=e128] [cursor=pointer]:
+            - /url: /ecommerce/product-details?id=9
+          - generic [ref=e129]:
+            - generic [ref=e130]: $56.45
+            - button "Add to cart" [ref=e131] [cursor=pointer]
+    - contentinfo [ref=e132]:
+      - generic [ref=e134]:
+        - generic [ref=e135]:
+          - link "logo":
+            - /url: https://qabrains.com
+            - img "logo"
+          - paragraph [ref=e136]: QA Brains is the ultimate QA Community to exchange knowledge, seek advice, and engage in discussions that enhance Quality Assurance testers' skills and expertise.
+        - generic [ref=e137]:
+          - heading "QA Topics" [level=3] [ref=e138]
+          - paragraph [ref=e139]: No featured topics available
+        - generic [ref=e140]:
+          - heading "Quick Links" [level=3] [ref=e141]
+          - list [ref=e142]:
+            - listitem [ref=e143]:
+              - link "Discussion" [ref=e144] [cursor=pointer]:
+                - /url: https://qabrains.com/discussion
+            - listitem [ref=e145]:
+              - link "About Us" [ref=e146] [cursor=pointer]:
+                - /url: https://qabrains.com/about
+            - listitem [ref=e147]:
+              - link "Terms & Conditions" [ref=e148] [cursor=pointer]:
+                - /url: https://qabrains.com/terms
+            - listitem [ref=e149]:
+              - link "Privacy Policy" [ref=e150] [cursor=pointer]:
+                - /url: https://qabrains.com/policy
+        - generic [ref=e151]:
+          - heading "Follow Us" [level=3] [ref=e152]
+          - generic [ref=e153]:
+            - link [ref=e154] [cursor=pointer]:
+              - /url: https://www.linkedin.com/showcase/qabrainscom
+              - img [ref=e155]
+            - link [ref=e157] [cursor=pointer]:
+              - /url: https://www.facebook.com/qabrainscom
+              - img [ref=e158]
+            - link [ref=e161] [cursor=pointer]:
+              - /url: https://www.youtube.com/@QABrains
+              - img [ref=e162]
+          - generic [ref=e165]:
+            - heading "For Support" [level=3] [ref=e166]
+            - link "support@qabrains.com" [ref=e167] [cursor=pointer]:
+              - /url: mailto:support@qabrains.com
+      - paragraph [ref=e169]: © 2026 QA Brains | All Rights Reserved
+  - region "Notifications alt+T":
+    - list:
+      - listitem [ref=e170]:
+        - img [ref=e172]
+        - generic [ref=e175]: Added to cart
+  - alert [ref=e176]
+```
+
+# Test source
+
+```ts
+  1  | export class CartPage{
+  2  |     constructor(page){
+  3  |         this.page=page;
+  4  |         this.checkoutButton = page.locator("button[class='flex items-center gap-2 bg-qa-clr hover:bg-blue-600 transition duration-300 ease-in-out text-white px-6 py-2 rounded-3xl cursor-pointer'] span")
+  5  |     }
+  6  | 
+  7  |     async clickCheckout(){
+> 8  |         await this.checkoutButton.click()
+     |                                   ^ Error: locator.click: Test timeout of 30000ms exceeded.
+  9  |        // await this.page.waitForTimeout(4000);
+  10 |        // console.log(await this.page.url());
+  11 |     }
+  12 | } 
+```
